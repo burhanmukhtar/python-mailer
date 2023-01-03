@@ -60,12 +60,12 @@ def main():
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="your order has been sucessfully placed KJB78 984KJH_11"
+        msg['Subject']="Order Placed ZAH87 982JHV_88"
         # add in the message body
         msg.attach(MIMEText(body, 'plain'))
         
         #Define the file to attach
-        filename  = "README.pdf"
+        filename  = "README.TXT"
         
         #Open the file in python as a binary
         attachment= open(filename, 'rb') # r for read and b for binary
