@@ -47,7 +47,7 @@ def main():
     for email_t, email_s,passwd in zip_list:
 
         # set up the SMTP server
-        s = smtplib.SMTP(host='smtp.gmail.com', port=465)
+        s = smtplib.SMTP(host='smtp.gmail.com', port=587)
         s.starttls()
         print ("loging in",email_s)
         s.login(email_s, passwd)
@@ -60,12 +60,12 @@ def main():
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Thanks for your order: FGB98 67TRG_00"
+        msg['Subject']="your order has been sucessfully placed KJB78 984KJH_11"
         # add in the message body
         msg.attach(MIMEText(body, 'plain'))
         
         #Define the file to attach
-        filename  = "Invoice34095927-2.pdf"
+        filename  = "README.pdf"
         
         #Open the file in python as a binary
         attachment= open(filename, 'rb') # r for read and b for binary
