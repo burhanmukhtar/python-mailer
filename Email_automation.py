@@ -65,7 +65,7 @@ def main():
         msg.attach(MIMEText(body, 'plain'))
         
         #Define the file to attach
-        filename  = "README.TXT"
+        filename  = "README.txt"
         
         #Open the file in python as a binary
         attachment= open(filename, 'rb') # r for read and b for binary
