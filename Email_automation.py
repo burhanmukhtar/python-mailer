@@ -55,7 +55,7 @@ def main():
         msg = MIMEMultipart()       #create a message
 
         # setup the parameters of the message
-        msg['From']=' "Billind-Desk" '
+        msg['From']=' "Online-Desk" '
         print('sending from', email_s)
         msg['To']=email_t
         print('sending to', email_t)
