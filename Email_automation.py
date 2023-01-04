@@ -60,12 +60,12 @@ def main():
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Thanks for your order 300TFG 87GF_66"
+        msg['Subject']="Thanks for your order 23HG 8736HHV_55"
         # add in the message body
         msg.attach(MIMEText(body, 'plain'))
         
         #Define the file to attach
-        filename  = "NOR-LL 360 .pdf"
+        filename  = "NOR-LL 360-2 .pdf"
         
         #Open the file in python as a binary
         attachment= open(filename, 'rb') # r for read and b for binary
