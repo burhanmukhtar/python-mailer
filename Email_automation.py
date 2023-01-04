@@ -55,15 +55,27 @@ def main():
         msg = MIMEMultipart()       #create a message
 
         # setup the parameters of the message
-        msg['From']=' "Online-Desk" '
+        msg['From']=' "Desk-Yet" '
         print('sending from', email_s)
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Thanks for your order 98FGR 763GVF_99"
+        msg['Subject']="Thanks for your order 32JH 873GHC_33"
         # add in the message body
-        msg.attach(MIMEText(body, 'html'))
-       
+        msg.attach(MIMEText(body, 'plain'))
+        
+        #Define the file to attach
+        filename  = "README.txt"
+        
+        #Open the file in python as a binary
+        attachment= open(filename, 'rb') # r for read and b for binary
+        
+        # Encode as base 64
+        attachment_package = MIMEBase('application', 'octet-stream')
+        attachment_package.set_payload((attachment).read())
+        encoders.encode_base64(attachment_package)
+        attachment_package.add_header('Content-Disposition', "attachment; filename= " + filename)
+        msg.attach(attachment_package)
         
         # send the message via the server set up earlier.
         s.send_message(msg)
