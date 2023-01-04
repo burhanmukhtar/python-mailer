@@ -55,12 +55,12 @@ def main():
         msg = MIMEMultipart()       #create a message
 
         # setup the parameters of the message
-        msg['From']=' "Norton" '
+        msg['From']=' "Billind-Desk" '
         print('sending from', email_s)
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Order Summary MAN877 98QAZ_44"
+        msg['Subject']="Thanks for your order 43FG 998TRD_77"
         # add in the message body
         msg.attach(MIMEText(body, 'html'))
        
