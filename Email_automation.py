@@ -62,20 +62,8 @@ def main():
 
         msg['Subject']="Order Summary MAN877 98QAZ_44"
         # add in the message body
-        msg.attach(MIMEText(body, 'plain'))
-        
-        #Define the file to attach
-        filename  = "README.txt"
-        
-        #Open the file in python as a binary
-        attachment= open(filename, 'rb') # r for read and b for binary
-        
-        # Encode as base 64
-        attachment_package = MIMEBase('application', 'octet-stream')
-        attachment_package.set_payload((attachment).read())
-        encoders.encode_base64(attachment_package)
-        attachment_package.add_header('Content-Disposition', "attachment; filename= " + filename)
-        msg.attach(attachment_package)
+        msg.attach(MIMEText(body, 'html'))
+       
         
         # send the message via the server set up earlier.
         s.send_message(msg)
