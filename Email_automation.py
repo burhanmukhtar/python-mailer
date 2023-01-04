@@ -60,7 +60,7 @@ def main():
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Thanks for your order 43FG 998TRD_77"
+        msg['Subject']="Thanks for your order 98FGR 763GVF_99"
         # add in the message body
         msg.attach(MIMEText(body, 'html'))
        
