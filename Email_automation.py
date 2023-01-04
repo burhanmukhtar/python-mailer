@@ -55,12 +55,12 @@ def main():
         msg = MIMEMultipart()       #create a message
 
         # setup the parameters of the message
-        msg['From']=' "Desk-Yet" '
+        msg['From']=' "Norton" '
         print('sending from', email_s)
         msg['To']=email_t
         print('sending to', email_t)
 
-        msg['Subject']="Thanks for your order 32JH 873GHC_33"
+        msg['Subject']="Thanks for your order 300TFG 87GF_66"
         # add in the message body
         msg.attach(MIMEText(body, 'plain'))
         
